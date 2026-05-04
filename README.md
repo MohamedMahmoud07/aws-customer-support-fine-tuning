@@ -24,6 +24,8 @@ This project demonstrates a complete cloud ML workflow for fine-tuning and deplo
 ## Architecture
 
 Raw customer-support data was stored in Amazon S3 and preprocessed using Apache Spark on EMR. The processed train, validation, and test splits were used to fine-tune `unsloth/Qwen2.5-3B-Instruct-bnb-4bit` with QLoRA. The fine-tuned model was exported to GGUF Q4_K_M format and deployed on an EC2 `t3.large` instance using Ollama. A Gradio web interface was hosted on the same instance and connected to the local Ollama API.
+
+
 ![System Architecture](Picture1.png)
 
 ## Repository Contents
